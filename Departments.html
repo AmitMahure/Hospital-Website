@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Departments - My Hospital</title>
+
+  <style>
+    /* styles.css */
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.department-list li {
+  margin-bottom: 10px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#search-results li {
+  margin-bottom: 5px;
+}
+
+footer {
+  background-color: #333;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#search">Search</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="departments">
+    <div class="container">
+      <h2>Departments</h2>
+      <ul class="department-list">
+        <li>
+          <a href="department-cardiology.html">Cardiology</a>
+        </li>
+        <li>
+          <a href="department-neurology.html">Neurology</a>
+        </li>
+        <li>
+          <a href="department-pediatrics.html">Pediatrics</a>
+        </li>
+        <!-- Add more departments as needed -->
+      </ul>
+    </div>
+  </section>
+
+  <section id="search">
+    <div class="container">
+      <h2>Search Departments</h2>
+      <input type="text" id="search-input" placeholder="Search departments...">
+      <ul id="search-results"></ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or need assistance, please don't hesitate to reach out to us.</p>
+      <p>Phone: 123-456-7890</p>
+      <p>Email: info@myhospital.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 My Hospital. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // script.js
+
+const searchInput = document.getElementById('search-input');
+const searchResults = document.getElementById('search-results');
+const departmentList = document.getElementsByClassName('department-list')[0];
+
+searchInput.addEventListener('input', function () {
+  const searchTerm = searchInput.value.toLowerCase();
+  searchResults.innerHTML = '';
+
+  if (searchTerm.trim() !== '') {
+    Array.from(departmentList.children).forEach(function (department) {
+      const departmentName = department.textContent.toLowerCase();
+      if (departmentName.includes(searchTerm)) {
+        const li = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = department.firstChild.href;
+        link.textContent = departmentName;
+        li.appendChild(link);
+        searchResults.appendChild(li);
+      }
+    });
+  }
+});
+
+  </script>
+</body>
+
+</html>

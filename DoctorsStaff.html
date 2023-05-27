@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doctor and Staff Profiles</title>
+  <style>
+    /* CSS styles for the doctor profiles section */
+    .profile {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .name {
+      font-weight: bold;
+    }
+    .qualification {
+      font-style: italic;
+    }
+    .specialization {
+      margin-top: 5px;
+    }
+    .experience {
+      margin-top: 5px;
+    }
+    .contact {
+      margin-top: 5px;
+    }
+    /* CSS styles for the search form */
+    .search-form {
+      margin-bottom: 10px;
+    }
+    .search-form input[type="text"] {
+      padding: 5px;
+      width: 200px;
+    }
+    .search-form input[type="submit"] {
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Doctor and Staff Profiles</h1>
+  
+  <!-- Search Form -->
+  <form class="search-form">
+    <input type="text" name="search" placeholder="Search by name, specialization, or department">
+    <input type="submit" value="Search">
+  </form>
+  
+  <!-- Doctor Profiles -->
+  <div id="profile-container">
+    <!-- Sample Doctor Profile -->
+    <div class="profile">
+      <div class="name">Dr. John Doe</div>
+      <div class="qualification">MBBS, MD</div>
+      <div class="specialization">Cardiology</div>
+      <div class="experience">10+ years of experience</div>
+      <div class="contact">Contact: johndoe@example.com</div>
+    </div>
+    
+    <!-- Sample Doctor Profile -->
+    <div class="profile">
+      <div class="name">Dr. Jane Smith</div>
+      <div class="qualification">MBBS, DNB</div>
+      <div class="specialization">Dermatology</div>
+      <div class="experience">8+ years of experience</div>
+      <div class="contact">Contact: janesmith@example.com</div>
+    </div>
+    
+    <!-- Add more doctor profiles here -->
+  </div>
+</body>
+</html>

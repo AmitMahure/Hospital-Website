@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin: 0;
+    }
+
+    .contact-form {
+      margin-top: 20px;
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .contact-form textarea {
+      height: 120px;
+    }
+
+    .contact-form button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .map {
+      margin-top: 20px;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Us</h1>
+
+    <div class="contact-info">
+      <div>
+        <h2>Hospital Name</h2>
+        <p>123 Hospital Street</p>
+        <p>City, State, ZIP Code</p>
+      </div>
+      <div>
+        <p>Phone: 123-456-7890</p>
+        <p>Email: info@example.com</p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send us a message</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <div class="map">
+      <h2>Location</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1234567890!2dlongitude!3dlatitude!4m5!3m4!1s0x0:0x0!8m2!3dlatitude!4dlongitude" allowfullscreen></iframe>
+    </div>
+  </div>
+</body>
+</html>
